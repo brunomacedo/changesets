@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <>
       <h1>Web, hello world!</h1>
-      <Button>Boop</Button>
+      <Button>Click here</Button>
     </>
   );
 }
