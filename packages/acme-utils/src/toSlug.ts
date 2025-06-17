@@ -1,18 +1,18 @@
 /**
- * Return a slugified copy of a string.
+ * Return a slugify copy of a string.
  *
- * @param {string} str The string to be slugified
- * @return {string} The slugified string.
+ * @param {string} str The string to be slugify
+ * @return {string} The slugify string.
  */
 export function toSlug(str: string): string {
-  let s = str;
-  if (!s) {
+  let sText = str;
+  if (!sText) {
     return "";
   }
-  s = s.toLowerCase().trim();
-  s = s.replace(/ & /g, " and ");
-  s = s.replace(/[ ]+/g, "-");
-  s = s.replace(/[-]+/g, "-");
-  s = s.replace(/[^a-z0-9-]+/g, "");
-  return s;
+  sText = sText.toLowerCase().trim();
+  sText = sText.replace(/ & /g, " and ");
+  sText = sText.replace(/[ ]+/g, "-");
+  sText = sText.replace(/[-]+/g, "-");
+  sText = sText.replace(/[^a-z0-9-]+/g, "");
+  return sText;
 }
