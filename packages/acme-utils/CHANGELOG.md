@@ -1,5 +1,11 @@
 # @acme/utils
 
+## 1.0.1
+
+### Patch Changes
+
+- 61b6eef: fix: rewrite strings to better clarity
+
 ## 1.0.0
 
 ### Major Changes
