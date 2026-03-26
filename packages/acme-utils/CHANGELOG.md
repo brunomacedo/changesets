@@ -1,5 +1,15 @@
 # @acme/utils
 
+## 1.0.0
+
+### Major Changes
+
+- da388fa: This is a fake release.
+
+### Patch Changes
+
+- 91ed38a: fix: add JSDoc documentation to the `usePrevious` hook
+
 ## 0.0.1
 
 ### Patch Changes
