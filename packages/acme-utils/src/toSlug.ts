@@ -1,11 +1,5 @@
 /**
- * Return a slugified copy of a string.
- *
- * Handles accented/diacritic characters by normalizing them to their ASCII
- * equivalents before slugifying (e.g. "ação" → "acao").
- *
- * @param {string} str The string to be slugified
- * @return {string} The slugified string.
+ * Slugify a string, e.g. "Hello World!" -> "hello-world"
  */
 export function toSlug(str: string): string {
   let s = str;
