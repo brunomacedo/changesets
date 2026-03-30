@@ -23,20 +23,11 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v5
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          run_install: false
+      - name: Setup Node, pnpm and dependencies
+        uses: ./.github/actions/setup-node-pnpm
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v5
-        with:
-          node-version-file: .nvmrc
-          check-latest: true
-          cache: pnpm
-
-      - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+      - name: Echo secret from actions secrets
+        uses: ./.github/actions/echo-secret
 
       - name: Create Release Pull Request
         id: changesets

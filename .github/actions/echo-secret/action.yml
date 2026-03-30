@@ -1,0 +1,22 @@
+name: Echo Secret
+description: A GitHub Action to echo a secret from the repository's secrets.
+
+inputs:
+  secret-name:
+    description: 'The name of the secret to echo'
+    required: true
+    default: 'MY_SECRET'
+
+runs:
+  using: composite
+  steps:
+    - name: Echo secret
+      run: |
+        echo "Value of the secret is:"
+        echo "1 >>> ${{ secrets[inputs.secret-name] }}"
+        echo "2 >>> ${{ secrets.MY_SECRET }}"
+
+    - name: Echo var
+      run: |
+        echo "Value of the var is:"
+        echo "1 >>> ${{ vars.MY_VAR }}"
