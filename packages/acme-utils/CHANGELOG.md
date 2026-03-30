@@ -1,5 +1,11 @@
 # @acme/utils
 
+## 1.0.2
+
+### Patch Changes
+
+- 38f8cf0: This updates actions to read composite files
+
 ## 1.0.1
 
 ### Patch Changes
