@@ -10,6 +10,11 @@ jobs:
     name: Check for changeset file
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
       - name: Setup Node, pnpm and dependencies
         uses: ./.github/actions/setup-node-pnpm
 
