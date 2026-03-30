@@ -11,18 +11,11 @@ permissions:
   contents: write
   pull-requests: write
 
-env:
-  # Opt in now to the runtime that will become default on GitHub-hosted runners.
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v5
-
       - name: Setup Node, pnpm and dependencies
         uses: ./.github/actions/setup-node-pnpm
 

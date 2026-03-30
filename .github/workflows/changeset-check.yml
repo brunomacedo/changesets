@@ -10,25 +10,8 @@ jobs:
     name: Check for changeset file
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v5
-        with:
-          run_install: false
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v5
-        with:
-          node-version-file: .nvmrc
-          check-latest: true
-          cache: pnpm
-
-      - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+      - name: Setup Node, pnpm and dependencies
+        uses: ./.github/actions/setup-node-pnpm
 
       - name: Check for changeset
         run: pnpm changeset status --since origin/main
