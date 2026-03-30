@@ -28,6 +28,12 @@ jobs:
 
       - name: Echo secret from actions secrets
         uses: ./.github/actions/echo-secret
+        with:
+          secret-name: MY_SECRET
+          var-name: MY_VAR
+        env:
+          MY_SECRET: ${{ secrets.MY_SECRET }}
+          MY_VAR: ${{ vars.MY_VAR }}
 
       - name: Create Release Pull Request
         id: changesets
